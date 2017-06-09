@@ -1,0 +1,51 @@
+{% if message != '' %}
+    <div class="comment comment-error">{{ message }}</div>
+{% endif %}
+
+{% if comment != '' %}
+    <div id="comment-{{ comment.id }}" class="media comment new">
+        <div class="pull-left">
+            {% if comment.user_avatar != '' %}
+                <img class="media-object" src="{{ comment.user_avatar }}"/>
+            {% else %}
+                <img class="media-object" src="http://www.gravatar.com/avatar/0b82069d0d95bf220796eecae463d6db?s=64&d=mm"/>
+            {% endif %}
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                {% if comment.user_name != '' %}
+                    <span class="user-name">
+                        {{ comment.user_name }}
+                    </span>
+                {% endif %}
+
+                {% if comment.name != '' %}
+                    <span class="user-name">
+                        {{ comment.name }}
+                    </span>
+                {% endif %}
+                <small class="comment-published-at">{{ comment.published_at|date('m.d.Y') }}</small>
+            </h4>
+            <div class="comment-content">{{ comment.content_html|raw }}</div>
+            <div class="comment-actions">
+                {% if ( level < depth ) or ( depth == 0 ) %}
+                <a href="#"
+                   class="action-link reply"
+                   data-id="{{ comment.id }}"
+                   data-level="{{ level }}">reply</a>
+                {% endif %}
+
+                {% if comment.user_id != 0 %}
+                    <a href="#"
+                       data-id="{{ comment.id }}"
+                       class="action-link edit">edit</a>
+                    <a href="#"
+                       data-id="{{ comment.id }}"
+                       class="action-link delete">delete</a>
+                {% endif %}
+            </div>
+        </div>
+        <div id="reply-{{ comment.id }}" class="level">
+        </div>
+    </div>
+{% endif %}

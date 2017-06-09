@@ -1,0 +1,29 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    fields:
+
+        css:
+            tab: jab.comments::lang.settings.styles_tab
+            label: jab.comments::lang.settings.css
+            type: switch
+            default: true
+            span: left
+
+        hide_reply_form:
+            tab: jab.comments::lang.settings.appearance_tab
+            label: jab.comments::lang.settings.hide_reply_form
+            comment: jab.comments::lang.settings.hide_reply_form_description
+            type: switch
+            default: true
+            span: left
+
+        hide_main_form:
+            tab: jab.comments::lang.settings.appearance_tab
+            label: jab.comments::lang.settings.hide_main_form
+            comment: jab.comments::lang.settings.hide_main_form_description
+            type: switch
+            default: true
+            span: left

@@ -1,0 +1,47 @@
+#comments,
+#comment-form-wrapper
+{
+    width: 640px;
+}
+
+#comments
+{
+    margin: 40px 0;
+}
+
+#comments .comment
+{
+    margin-top: 0;
+}
+
+#comments .comment form#comment-form
+{
+    max-width: 320px;
+    margin-top: 20px;
+}
+
+#comments .comment h4 .user-name
+{
+    font-weight: bold;
+}
+
+#comments .comment .action-link
+{
+    margin-right: 10px;
+}
+
+#comments .comment .level
+{
+    margin: 20px 0px 0px 20px
+}
+
+.cancel-reply
+{
+    display: none;
+    float: right;
+}
+
+.form-submit {
+    float: left;
+}
+

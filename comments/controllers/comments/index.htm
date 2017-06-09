@@ -1,0 +1,13 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item control-chart" data-control="chart-pie">
+            <ul>
+                <li data-color="#95b753"><?= e(trans('jab.comments::lang.backend.chart_published')) ?> <span><?= $published ?></span></li>
+                <li data-color="#e5a91a"><?= e(trans('jab.comments::lang.backend.chart_hidden')) ?> <span><?= $hidden ?></span></li>
+                <li data-color="#cccccc"><?= e(trans('jab.comments::lang.backend.chart_total')) ?> <span><?= $total ?></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<?= $this->listRender() ?>

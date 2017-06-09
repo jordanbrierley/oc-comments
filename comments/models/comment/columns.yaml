@@ -1,0 +1,41 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+  id:
+    label: jab.comments::lang.backend.id
+    searchable: false
+
+  content:
+    label: jab.comments::lang.backend.content
+    searchable: true
+
+  author:
+     label: jab.comments::lang.backend.author
+     relation: user
+     select: name
+     searchable: true
+
+  name:
+     label: jab.comments::lang.backend.name
+     searchable: true
+
+  published:
+    label: jab.comments::lang.backend.published
+    type: switch
+
+  published_at:
+    label: jab.comments::lang.backend.created
+    type: date
+
+#  created_at:
+#    label: jab.upload::lang.upload.created
+#    type: date
+#    invisible: true
+#
+#  updated_at:
+#    label: jab.upload::lang.upload.updated
+#    type: date
+#    invisible: true
